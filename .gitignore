@@ -1,0 +1,35 @@
+# Gradle & Kotlin
+.gradle/
+.kotlin/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+out/
+
+# Allure
+allure-results/
+allure-report/
+build/allure-results/
+build/reports/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets & local environment overrides
+.env
+.env.*
+local.properties
+src/test/resources/config/secret*.properties
+*.pem
+*.key
