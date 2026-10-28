@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Product",
+  "description": "Strict JSON Schema derived from #/components/schemas/Product and #/components/schemas/Measure in docs/openapi.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": ["integer", "null"]
+    },
+    "name_ru": {
+      "type": ["string", "null"]
+    },
+    "name_kk": {
+      "type": ["string", "null"]
+    },
+    "gtin": {
+      "type": ["string", "null"]
+    },
+    "ntin_code": {
+      "type": ["string", "null"]
+    },
+    "is_social": {
+      "type": ["boolean", "null"]
+    },
+    "modified": {
+      "type": ["integer", "null"]
+    },
+    "status": {
+      "type": ["string", "null"],
+      "enum": ["ACTIVE", "INACTIVE", null]
+    },
+    "is_markedeac": {
+      "type": ["boolean", "null"]
+    },
+    "measure": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/definitions/Measure" }
+      ]
+    },
+    "ntin_isdeactivated": {
+      "type": ["boolean", "null"]
+    },
+    "ntin_deactivationreason": {
+      "type": ["string", "null"]
+    },
+    "ntin_duplicateofproduct": {
+      "type": ["string", "null"]
+    }
+  },
+  "definitions": {
+    "Measure": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": ["integer", "null"]
+        },
+        "name": {
+          "type": ["string", "null"]
+        },
+        "short_name": {
+          "type": ["string", "null"]
+        },
+        "code": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
+}
