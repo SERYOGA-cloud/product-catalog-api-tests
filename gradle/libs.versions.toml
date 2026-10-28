@@ -1,0 +1,39 @@
+[versions]
+allure-gradle-plugin = "4.1.0"
+allure-java = "2.29.0"
+allure-report = "3.14.3"
+assertj = "3.26.3"
+detekt = "1.23.8"
+jackson = "2.18.1"
+junit = "5.11.3"
+kotlin = "2.0.21"
+logback = "1.5.12"
+rest-assured = "5.5.0"
+slf4j = "2.0.16"
+wiremock = "3.9.2"
+
+[plugins]
+allure = { id = "io.qameta.allure", version.ref = "allure-gradle-plugin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+[libraries]
+allure-bom = { module = "io.qameta.allure:allure-bom", version.ref = "allure-java" }
+allure-junit5 = { module = "io.qameta.allure:allure-junit5" }
+allure-rest-assured = { module = "io.qameta.allure:allure-rest-assured" }
+assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-datatype-jsr310 = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
+junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+junit-platform-suite = { module = "org.junit.platform:junit-platform-suite" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+rest-assured = { module = "io.rest-assured:rest-assured", version.ref = "rest-assured" }
+rest-assured-json-schema = { module = "io.rest-assured:json-schema-validator", version.ref = "rest-assured" }
+rest-assured-kotlin = { module = "io.rest-assured:kotlin-extensions", version.ref = "rest-assured" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+wiremock-standalone = { module = "org.wiremock:wiremock-standalone", version.ref = "wiremock" }

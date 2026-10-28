@@ -1,0 +1,55 @@
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+
+config:
+  validation: true
+  warningsAsErrors: false
+
+complexity:
+  active: true
+  CyclomaticComplexMethod:
+    active: true
+    threshold: 20
+  LongMethod:
+    active: true
+    threshold: 200
+  LongParameterList:
+    active: true
+    functionThreshold: 8
+    constructorThreshold: 18
+  TooManyFunctions:
+    active: false
+
+exceptions:
+  active: true
+  TooGenericExceptionCaught:
+    active: false
+
+naming:
+  active: true
+  FunctionNaming:
+    active: true
+    ignoreAnnotated:
+      - 'Test'
+      - 'ParameterizedTest'
+
+performance:
+  active: true
+  SpreadOperator:
+    active: false
+
+style:
+  active: true
+  MagicNumber:
+    active: false
+  MaxLineLength:
+    active: true
+    maxLineLength: 210
+  WildcardImport:
+    active: true
+  ReturnCount:
+    active: false
+  ThrowsCount:
+    active: true
+    max: 6
