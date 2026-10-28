@@ -29,7 +29,8 @@ Thumbs.db
 # Secrets & local environment overrides
 .env
 .env.*
-local.properties
+!.env.example
+*.local.properties
 src/test/resources/config/secret*.properties
 *.pem
 *.key

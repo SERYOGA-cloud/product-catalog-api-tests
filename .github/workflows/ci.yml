@@ -5,10 +5,14 @@ on:
     branches:
       - main
       - master
+      - dev
+      - develop
   push:
     branches:
       - main
       - master
+      - dev
+      - develop
       - "feature/**"
       - "fix/**"
       - "ci/**"
